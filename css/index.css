@@ -1828,7 +1828,7 @@ div#upper_section div.news form
 /* Linktree SMF Hispano Style */
 .Hispano_breadcrumb
 {	
-	height: 21px;
+	min-height: 21px;
 	overflow: hidden;
 	width: auto;
 	padding:5px;
@@ -1841,7 +1841,7 @@ div#upper_section div.news form
 {
 	margin: 0;
 	padding: 0;
-	height: 21px;
+	min-height: 21px;
 	
 }
 .Hispano_breadcrumb ul li
