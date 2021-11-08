@@ -108,7 +108,7 @@ function template_html_above()
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 	<script type="text/javascript" src="', $settings['default_theme_url'], '/scripts/script.js?fin20"></script>
 	<script type="text/javascript" src="', $settings['theme_url'], '/scripts/theme.js?fin20"></script>
-	<script type="text/javascript" src="', $settings['theme_url'], '/scripts/login.js"></script>
+	<script type="text/javascript" src="', $settings['theme_url'], '/scripts/dropdown.js"></script>
 	<script type="text/javascript"><!-- // --><![CDATA[
 		var smf_theme_url = "', $settings['theme_url'], '";
 		var smf_default_theme_url = "', $settings['default_theme_url'], '";
@@ -275,15 +275,15 @@ function template_body_below()
 
 						if(!empty($settings['twitter_username']))
 						echo '
-							<li><a class="social_icon twitter" href="http://twitter.com/', $settings['twitter_username'] , '" target="_blank" rel="noopener"></a></li>';
+							<li><a class="social_icon twitter" href="https://twitter.com/', $settings['twitter_username'] , '" target="_blank" rel="noopener"></a></li>';
 
 						if(!empty($settings['facebook_username']))
 						echo '
-							<li><a class="social_icon facebook" href="http://facebook.com/', $settings['facebook_username'] , '" target="_blank" rel="noopener"></a></li>';
+							<li><a class="social_icon facebook" href="https://facebook.com/', $settings['facebook_username'] , '" target="_blank" rel="noopener"></a></li>';
 
 						if(!empty($settings['youtube_username']))
 						echo '
-							<li><a class="social_icon youtube" href="http://youtube.com/user/', $settings['youtube_username'] , '" target="_blank" rel="noopener"></a></li>';
+							<li><a class="social_icon youtube" href="https://youtube.com/user/', $settings['youtube_username'] , '" target="_blank" rel="noopener"></a></li>';
 
 						echo '
 							<li><a class="social_icon rss" href="', empty($settings['rss_url']) ? '' . $scripturl . '?action=.xml;type=rss' : '' . $settings['rss_url'] . '', '" target="_blank" rel="noopener"></a></li>';
@@ -415,7 +415,7 @@ function template_menu()
 			echo '
 				<div id="container">
 					<div id="loginContainer">
-						<a href="#" id="loginButton"><span>', $context['user']['name'], '</span></a>
+						<a href="#" id="loginButton" onclick="return overlay(this, \'loginBox\',\'bottom\')"><span>', $context['user']['name'], '</span></a>
 					<div style="clear:both"></div>
 					<div id="loginBox" style="width: 286px">
 						<div id="loginForm">
@@ -450,7 +450,7 @@ function template_menu()
 			echo '
 				<div id="container">
 					<div id="loginContainer">
-						<a href="#" id="loginButton"><span>', $txt['login'], '</span><em></em></a>
+						<a href="#" id="loginButton" onclick="return overlay(this, \'loginBox\',\'bottom\')"><span>', $txt['login'], '</span><em></em></a>
 					<div style="clear:both"></div>
 					<div id="loginBox">
 						<div id="loginForm">
@@ -507,7 +507,7 @@ function template_menu()
 // Theme copyright Please DO NOT REMOVE THIS!
 function theme_st()
 {
-	$trick = '<a href="https://smftricks.com">Theme by SMF Tricks</a>';
+	$trick = 'Theme by <a href="https://smftricks.com">SMF Tricks</a>';
 	return $trick;
 }
 

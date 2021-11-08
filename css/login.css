@@ -15,11 +15,9 @@
 
 /* Login Button */
 #loginButton { 
-    display:inline-block;
-    position:relative;
-    z-index:30;
+    float: right;
     cursor:pointer;
-	height: 30px;
+	min-height: 30px;
 }
 .ava_bar
 {
@@ -52,7 +50,6 @@
 */
 /* Login Box */
 #loginBox {
-    position:absolute;
     top: 35px;
     right:0;
     display:none;
@@ -95,7 +92,8 @@
     -moz-border-radius:3px 0 3px 3px;
     background:#fff;
     padding:6px;
-	margin-top: -5px;
+	position: relative;
+	z-index: 2;
 	box-shadow: 0 12px 25px rgba(0, 0, 0, 0.58);
 	color: #353535;
 }
