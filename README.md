@@ -9,6 +9,7 @@
 
 ## Features
 - Logo URL
+- Custom Copyright
 
 ## Requirements
 * Red Sample can be installed on SMF 2.0.x
